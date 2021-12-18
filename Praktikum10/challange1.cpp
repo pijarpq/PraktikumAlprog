@@ -1,7 +1,6 @@
 #include <iostream>
 using namespace std;
 int main() {
-  int matriks1[10][10], matriks2[10][10], hasil[10][10];
   int i, j, k, barisA, kolomA, barisB, kolomB, jumlah = 0;
   cout << "Masukkan jumlah baris matriks A: ";
   cin >> barisA;
@@ -12,7 +11,8 @@ int main() {
   cin >> barisB;
   cout << "Masukkan jumlah kolom matriks B: ";
   cin >> kolomB;
-
+  
+  int matriks1[barisA][kolomA], matriks2[barisB][kolomB], hasil[barisA][kolomB];
   cout << endl;
   cout << endl;
 
@@ -48,8 +48,8 @@ int main() {
     cout << endl;
     cout << "==========================================================" << endl;
     cout << "Elemen matriks kedua yang kamu masukan:" <<  endl;
-    for(i = 0; i < barisA; i++){
-      for(j = 0; j < kolomA; j++){
+    for(i = 0; i < barisB; i++){
+      for(j = 0; j < kolomB; j++){
         cout << matriks2[i][j] << "\t";
       }
       cout << endl;
@@ -72,7 +72,7 @@ int main() {
     cout << "==========================================================" << endl;
     cout << "Hasil perkalian matriks: \n";
     for(i = 0; i < barisA; i++){
-      for(j = 0; j < kolomA; j++){
+      for(j = 0; j < kolomB; j++){
         cout << hasil[i][j] << "\t";
       }
       cout << endl;
